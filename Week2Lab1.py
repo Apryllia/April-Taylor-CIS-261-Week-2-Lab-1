@@ -1,7 +1,7 @@
 import random
 
 def display_title():
-    print("Guess the number!")
+    print("Can you guess the number?")
     print()
 
 def play_game(LIMIT):    
@@ -12,10 +12,10 @@ def play_game(LIMIT):
 
     while (guess != number):
         if guess < number:
-            print("Too low.")
+            print("Nope! Too low. Try again.")
             count += 1
         elif guess > number:
-            print("Too high.")
+            print("Oops! Too high. Try again.")
             count += 1
         guess = int(input("Your guess: "))
     print(f"You guessed it in {count} tries.\n")
@@ -26,7 +26,7 @@ def main():
     while again.lower() == "y":
         LIMIT = int(input("Enter the limit: "))
         play_game(LIMIT)
-        again = input("Would you like to play again? (y/n): ")
+        again = input("Want to play again? (y/n): ")
         print()
     print("Bye!")
 
